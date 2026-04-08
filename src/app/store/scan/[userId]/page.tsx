@@ -5,15 +5,16 @@ import { MEMBER_LEVEL_CONFIG } from "@/lib/member"
 import AddPurchaseForm from "@/components/AddPurchaseForm"
 
 interface PageProps {
-  params: { userId: string }
+  params: Promise<{ userId: string }>
 }
 
 export default async function StoreScanPage({ params }: PageProps) {
+  const { userId } = await params
   const session = await auth()
   if (!session) redirect("/store/login")
 
   const user = await prisma.user.findUnique({
-    where: { id: params.userId },
+    where: { id: userId },
     include: {
       purchases: {
         orderBy: { createdAt: "desc" },

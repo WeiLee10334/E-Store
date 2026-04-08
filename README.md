@@ -5,7 +5,7 @@
     <strong>A modern, anime-themed membership & loyalty management platform</strong>
   </p>
   <p>
-    <img src="https://img.shields.io/badge/Next.js-14-black?logo=next.js" alt="Next.js 14"/>
+    <img src="https://img.shields.io/badge/Next.js-15-black?logo=next.js" alt="Next.js 15"/>
     <img src="https://img.shields.io/badge/TypeScript-5.7-blue?logo=typescript" alt="TypeScript"/>
     <img src="https://img.shields.io/badge/Prisma-5.x-2D3748?logo=prisma" alt="Prisma"/>
     <img src="https://img.shields.io/badge/Auth-NextAuth_v5-purple" alt="NextAuth v5"/>
@@ -63,7 +63,7 @@ This project is an anime-styled membership management platform with an "Adventur
 
 | 類別 | 技術 | 版本 |
 |------|------|------|
-| Framework | [Next.js](https://nextjs.org/) App Router | 14.2.x |
+| Framework | [Next.js](https://nextjs.org/) App Router | 15.5.x |
 | Language | TypeScript (strict mode) | 5.7.x |
 | Auth | [NextAuth.js v5](https://authjs.dev/) + Google OAuth | 5.0.0-beta |
 | ORM | [Prisma](https://www.prisma.io/) | 5.x |
