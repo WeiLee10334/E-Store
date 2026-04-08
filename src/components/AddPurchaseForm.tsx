@@ -50,7 +50,8 @@ export default function AddPurchaseForm({ userId, items }: AddPurchaseFormProps)
       setSelectedItem(null)
       setCustomAmount("")
       setCustomName("")
-    } catch {
+    } catch (err) {
+      console.error("Purchase submission error:", err)
       setError("發生錯誤，請重試")
     } finally {
       setLoading(false)

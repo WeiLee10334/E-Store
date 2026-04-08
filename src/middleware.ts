@@ -9,8 +9,12 @@ export default auth((req) => {
     return NextResponse.redirect(new URL("/login", req.url))
   }
 
-  // Protect store routes
-  if (pathname.startsWith("/store") && !req.auth) {
+  // Protect store routes (excluding the login page itself to avoid redirect loops)
+  if (
+    pathname.startsWith("/store") &&
+    !pathname.startsWith("/store/login") &&
+    !req.auth
+  ) {
     return NextResponse.redirect(new URL("/store/login", req.url))
   }
 
